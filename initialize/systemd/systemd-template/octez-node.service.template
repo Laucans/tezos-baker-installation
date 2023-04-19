@@ -1,0 +1,19 @@
+# The Tezos Node service (part of systemd)
+# file: /etc/systemd/system/octez-node.service
+
+[Unit]
+Description     = Tezos Node Service
+Documentation   = http://tezos.gitlab.io/
+Wants           = network-online.target
+After           = network-online.target
+
+[Service]
+User            = <user>
+Group           = <user>
+WorkingDirectory= /home/<user>/
+ExecStart       = /home/<user>/<binaries_home>/octez-node run  --config-file <tezos_node_home>/config.json
+Restart         = on-failure
+
+[Install]
+WantedBy        = multi-user.target
+RequiredBy      = octez-baker.service octez-accuser.service

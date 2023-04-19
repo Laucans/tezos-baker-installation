@@ -1,0 +1,18 @@
+# The Tezos Accuser service (part of systemd)
+# file: /etc/systemd/system/octez-accuser.service
+
+[Unit]
+Description     = Tezos accuser Service
+Documentation   = http://tezos.gitlab.io/
+Wants           = network-online.target
+Requires        = octez-node.service
+
+[Service]
+User            = <user>
+Group           = <user>
+WorkingDirectory= /home/<user>
+ExecStart       = /home/<user>/<binaries_home>/octez-accuser-Pt<protocol> --config-file /home/<user>/<accuser_home>/config.json run
+Restart         = on-failure
+
+[Install]
+WantedBy        = multi-user.target

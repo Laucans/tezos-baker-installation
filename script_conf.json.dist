@@ -1,0 +1,22 @@
+{
+  "baker_user_name": "tezosbaker",
+  "octez_binaries_home": "octez_binaries",
+  "network": "mainnet",
+  "protocol": "Mumbai",
+  "tezos_node": {
+    "home": "tezos_node",
+    "data_home": "data",
+    "rpc_port": 8732,
+    "metric_port": 9932,
+    "history_mode": "full",
+    "snapshot_uri": "https://snapshots.tezos.marigold.dev/api/mainnet/full"
+  },
+  "tezos_baker": {
+    "home": "tezos_baker",
+    "initial_vote": "pass",
+    "ledger_pk_name": "ledger_baker"
+  },
+  "tezos_accuser": {
+    "home": "tezos_accuser"
+  }
+}

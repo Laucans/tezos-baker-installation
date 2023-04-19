@@ -1,0 +1,6 @@
+{ 
+  "base_dir": "<baker_home>",
+  "endpoint": "http://127.0.0.1:<rpc_port>", 
+  "web_port": 8080, 
+  "confirmations": 0 
+}

@@ -1,0 +1,51 @@
+{
+  "data-dir": "<data_dir>",
+  "network": "<network>",
+  "metrics_addr": [
+    "0.0.0.0:<metrics_port>"
+  ],
+  "rpc": {
+    "listen-addrs": [
+      "0.0.0.0:<rpc_port>",
+      ":<rpc_port>"
+    ],
+    "cors-origin": [
+      "*"
+    ],
+    "cors-headers": [
+      "Content-Type"
+    ],
+    "acl": [
+      {
+        "address": "0.0.0.0:<rpc_port>",
+        "blacklist": []
+      },
+      {
+        "address": "127.0.0.1:<rpc_port>",
+        "blacklist": []
+      }
+    ]
+  },
+  "p2p": {
+    "limits": {
+      "connection-timeout": 10,
+      "min-connections": 15,
+      "expected-connections": 25,
+      "max-connections": 35,
+      "max_known_points": [
+        300,
+        200
+      ],
+      "max_known_peer_ids": [
+        300,
+        200
+      ]
+    }
+  },
+  "shell": {
+    "chain_validator": {
+      "synchronisation_threshold": 1
+    },
+    "history_mode": "<history_mode>"
+  }
+}
