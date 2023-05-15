@@ -27,14 +27,13 @@ fi
 
 data_dir_absolute_path=/home/$baker_user/$node_dir/$data_dir
 
-sudo test ${data_dir_absolute_path}/context
-if [ $? ]; then
+if [ -d "${data_dir_absolute_path}/context" ]; then
   echo "Blockchain has already been imported, exiting"
   exit 0
 else
   echo "Did not find pre-existing data, importing blockchain"
   sudo -u ${baker_user} mkdir -p "${data_dir_absolute_path}"
-  snapshot_file="${node_dir}/chain.snapshot"
+  snapshot_file="/home/$baker_user/$node_dir/chain.snapshot"
 
   sudo test ${data_dir_absolute_path}/lock && sudo rm "${data_dir_absolute_path}/lock"
   if [[ "${snapshot_URI}" == http* ]]; then
