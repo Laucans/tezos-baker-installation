@@ -40,8 +40,8 @@ sudo chmod -R 710 $output_dir
 sudo chown -R $baker_user:$baker_user $output_dir
 
 # Download sapling deps
-if [ ! -f "/home/$baker_user/fetch-params.sh" ]; then
+if [ ! -f "/home/$baker_user/.zcash-params" ]; then
   sudo wget -P /home/$baker_user https://raw.githubusercontent.com/zcash/zcash/master/zcutil/fetch-params.sh
   sudo chown $baker_user:$baker_user /home/$baker_user/fetch-params.sh ; sudo chmod 755 /home/$baker_user/fetch-params.sh
-  sudo -u $baker_user ./home/$baker_user/fetch-params.sh
+  sudo -u $baker_user /home/$baker_user/fetch-params.sh
 fi
