@@ -8,7 +8,7 @@ This repo contains scripts & resources to ease and automate the setup of a Tezos
 
 - [x] CPU: Running with at least 2 cores is recommended
 - [x] Memory: Recommended RAM for running a Tezos Node is 8GB
-- [x] Disk: 100 GB SSD (SSD is highly preferred over HDD)
+- [x] Disk: 250 GB SSD (SSD is highly preferred over HDD)
 - [x] A Unix debian-based distribution.
 - [x] Ledger Nano S or X
 
