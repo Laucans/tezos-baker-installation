@@ -39,7 +39,11 @@ Ensure the following:
 Refer to [this guide](https://www.coincashew.com/coins/overview-xtz/guide-how-to-setup-a-baker/configure-ledger-nano-s) for more detailed instructions.
 
 # Script Flow
-The main entrypoint script is `main_initialize_baker.sh`.
+The main entrypoint script is `main_initialize_baker.sh`, which can be called as follows:
+
+```
+sudo ./main_initialize_baker.sh script_conf.json
+```
 
 The script uses configuration details from `script_conf.json` to:
 - Create a new user account dedicated to the baker.
