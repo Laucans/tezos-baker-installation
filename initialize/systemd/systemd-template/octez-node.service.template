@@ -11,7 +11,7 @@ After           = network-online.target
 User            = <user>
 Group           = <user>
 WorkingDirectory= /home/<user>/
-ExecStart       = /home/<user>/<binaries_home>/octez-node run  --config-file <tezos_node_home>/config.json
+ExecStart       = /home/<user>/<binaries_home>/octez-node run  --config-file /home/<user>/<tezos_node_home>/config.json
 Restart         = on-failure
 
 [Install]

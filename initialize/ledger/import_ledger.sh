@@ -27,10 +27,10 @@ while true; do
     echo "- Tezos baker app is installed on your ledger (to install see https://www.coincashew.com/coins/overview-xtz/guide-how-to-setup-a-baker/configure-ledger-nano-s)"
     echo "- Tezos baker app is launched on your ledger"
     echo "- Tezos baker app watermark"
-    echo "- Ledger can be read by plugdev group"
+    echo "- Ledger can be read by members of the 'plugdev' group"
 
-    read -p "Everything is ok ? (yes/no) " reponse
-    case $reponse in
+    read -p "Everything is ok ? (yes/no) " reply
+    case $reply in
     [Yy]es | [Yy])
         echo "We will link your ed25519 key from your ledger to configuration"
         import_ledger_command_default=$(echo "sudo -u $user /home/$user/$binaries_home/$(sudo -u $user /home/$user/$binaries_home/octez-client list connected ledgers | grep ed25519 | xargs)")
