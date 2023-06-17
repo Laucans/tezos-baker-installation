@@ -1,15 +1,15 @@
 {
   "baker_user_name": "tezosbaker",
   "octez_binaries_home": "octez_binaries",
-  "network": "mainnet",
-  "protocol": "Mumbai",
+  "network": "ghostnet",
+  "protocol": "Nairob",
   "tezos_node": {
     "home": "tezos_node",
     "data_home": "data",
     "rpc_port": 8732,
     "metric_port": 9932,
     "history_mode": "full",
-    "snapshot_uri": "/home/shared/full"
+    "snapshot_uri": "https://snapshots.tezos.marigold.dev/api/ghostnet/full"
   },
   "tezos_baker": {
     "home": "tezos_baker",
